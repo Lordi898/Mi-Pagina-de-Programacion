@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página de Programación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Mi Página de Programación</h1>
+    <p>Recursos, tutoriales y ejercicios para aprender programación</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#tutoriales">Tutoriales</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#ejercicios">Ejercicios</a>
+      <a href="#problemas">Problemas y Soluciones</a>
+      <a href="#miniapps">Miniaplicaciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Inicio</h2>
+      <p>Esta página está diseñada para ayudarte a aprender programación desde cero con tutoriales, ejemplos y ejercicios prácticos.</p>
+      <p id="contador-visitas">Visitas: 0</p>
+    </section>
+
+    <section id="tutoriales">
+      <h2>Tutoriales</h2>
+      <article>
+        <h3>Cómo empezar con Java</h3>
+        <p>Aprende a configurar tu entorno y escribir tu primer programa en Java.</p>
+        <a href="tutoriales/java.html">Leer más</a>
+      </article>
+      <article>
+        <h3>CRUD en Bases de Datos con SQL</h3>
+        <p>Un tutorial paso a paso para implementar operaciones CRUD.</p>
+        <a href="tutoriales/crud.html">Leer más</a>
+      </article>
+    </section>
+
+    <section id="recursos">
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="descargas/script-ejemplo.sql" download onclick="confirmarDescarga('Plantilla de Base de Datos SQL')">Plantilla de base de datos SQL</a></li>
+        <li><a href="descargas/calculadora-java.zip" download onclick="confirmarDescarga('Calculadora en Java')">Calculadora en Java</a></li>
+      </ul>
+    </section>
+
+    <section id="ejercicios">
+      <h2>Ejercicios</h2>
+      <input type="text" id="buscador" placeholder="Buscar ejercicios..." onkeyup="filtrarEjercicios()">
+      <div class="ejercicio">
+        <h3>Ejercicio 1: Introducción a Java</h3>
+        <button onclick="toggleSolucion('solucion1')">Mostrar/Ocultar Solución</button>
+        <div id="solucion1" style="display: none;">
+          <p>Solución: public class HolaMundo { public static void main(String[] args) { System.out.println("Hola Mundo"); } }</p>
+        </div>
+      </div>
+      <div class="ejercicio">
+        <h3>Ejercicio 2: Estructuras de Control</h3>
+        <button onclick="toggleSolucion('solucion2')">Mostrar/Ocultar Solución</button>
+        <div id="solucion2" style="display: none;">
+          <p>Solución: if (x > 0) { System.out.println("Positivo"); } else { System.out.println("Negativo"); }</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="problemas">
+      <h2>Problemas y Soluciones</h2>
+      <article>
+        <h3>Cómo conectar Java a una base de datos</h3>
+        <p>Un ejemplo práctico para conectar Java con MySQL usando JDBC.</p>
+        <a href="problemas/conexion-java-bd.html">Leer más</a>
+      </article>
+      <article>
+        <h3>Ejercicio básico de POO</h3>
+        <p>Resolviendo un problema simple con Programación Orientada a Objetos.</p>
+        <a href="problemas/poo-basico.html">Leer más</a>
+      </article>
+    </section>
+
+    <section id="miniapps">
+      <h2>Miniaplicaciones</h2>
+      <h3>Generador de Contraseñas</h3>
+      <button onclick="generarContraseña()">Generar Contraseña</button>
+      <p id="resultado"></p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/tu-correo" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mi Página de Programación. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
